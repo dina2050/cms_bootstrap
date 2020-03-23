@@ -1,0 +1,23 @@
+{% load cms_tags menu_tags static sekizai_tags %}
+<!doctype html>
+<html>
+    <head>
+        <title>{% block title %}This is my new project home page{% endblock title %}</title>
+        <link href="{% static 'bootstrap/dist/css/bootstrap.min.css' %}" rel="stylesheet">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+       
+        {% render_block "css" %}
+    </head>
+    <body>
+        {% cms_toolbar %}
+        
+            <!-- <ul class="nav">
+                {% show_menu 0 100 100 100 %}
+            </ul> -->
+            {% block content %}{% endblock content %}
+        
+        {% render_block "js" %}
+        <script src="{% static 'bootstrap/dist/js/bootstrap.min.js' %}" rel="stylesheet"></script>
+        
+    </body>
+</html>

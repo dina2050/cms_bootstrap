@@ -1,0 +1,17 @@
+
+
+    <div class="row">
+    {% for member in instance.members.all  %}
+    
+       
+           <div class="col-4">
+            <img src="{{member.picture.url}}">
+            <p>{{member.first_name}} {{member.last_name}}</p>
+            <p>{{member.role}}</p>
+           
+       </div>
+        
+    
+
+    {% endfor %}
+</div>

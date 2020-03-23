@@ -1,0 +1,31 @@
+header {
+    height: 100vh;
+    background-image: url("images/header-bg.jpg");
+    background-size: cover;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titles {
+    color: red;
+}
+
+.vice-versa .row {
+    flex-direction: row-reverse;
+}
+.timeline{
+    position: relative;
+   
+}
+.timeline img {
+    position: absolute;
+    width: 10%;
+    height: 10vh;
+    left: 45%;
+    bottom: 63%;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+

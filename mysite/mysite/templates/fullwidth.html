@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% load cms_tags menu_tags sekizai_tags %}
+{% load static %}
+{% block title %}{% page_attribute "page_title" %}{% endblock title %}
+
+{% block content %}
+{% addtoblock 'css'%}
+    <link rel="stylesheet" href="{% static 'mysite/style.css' %}">
+    {% endaddtoblock %}
+	
+	<div class="container-fluid">
+
+		<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+			<div class="container">
+			  <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>
+			  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+				Menu
+				<i class="fas fa-bars"></i>
+			  </button>
+			  <div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav text-uppercase ml-auto">
+				  <li class="nav-item">
+					<a class="nav-link js-scroll-trigger" href="#services">Services</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link js-scroll-trigger" href="#about">About</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link js-scroll-trigger" href="#team">Team</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+				  </li>
+				</ul>
+			  </div>
+			</div>
+		  </nav>
+		  <header>
+			  <h3 class="titles">{% placeholder "subtitle"%}</h3>
+			  <h1 class="titles">{% placeholder "title"%}</h1>
+			  <a href="#">TELL ME MORE</a>
+		  </header>
+		  <main>
+			<div class="container">
+			  <section class="services">
+				  <div class="title">
+
+					  <h2 class="text-center">SERVICES</h2>
+					  <p class="text-center">Lorem ipsum dolor sit amet consectetur.</p>
+					  {% placeholder "content" %}
+				  </div>
+			  </section>
+
+			  <section class="portfolio">
+				<div class="title">
+
+					<h2 class="text-center">PORTFOLIO</h2>
+					<p class="text-center">Lorem ipsum dolor sit amet consectetur.</p>
+					{% placeholder "images" %}
+				</div>
+			</section>
+			<section>
+				<div class="timeline">
+					<h1 class="text-center">ABOUT</h1>
+					<p class="text-center">Lorem ipsum dolor sit amet consectetur.</p>
+					
+					{% placeholder "timelineplugin" %}
+				</div>
+
+				<div class="teamsection">
+					<h1 class="text-center">OUR AMAZING TEAM</h1>
+					<p class="text-center">Lorem ipsum dolor sit amet consectetur.</p>
+					{% placeholder "teamplugin" %}
+				</div>
+			</section>
+		</div>
+		  </main>
+	</div>
+{% endblock content %}

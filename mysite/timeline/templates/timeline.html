@@ -1,0 +1,28 @@
+<h1>MON SUPER TIMELINE</h1>
+<p>{{ instance.text }}</p>
+
+
+<ul>
+    {% for event in instance.events.all  %}
+    {% if event.id|divisibleby:2 %}
+    <li class="vice-versa">
+        {% else %}
+        <li>
+            {% endif %}
+            <div class="w-100 timeline">
+
+               
+                    
+                       <h3>{{event.date}}</h3> 
+                        <h3>{{event.titre}}</h3>
+                        <p>{{event.evenement}}</p>
+                    
+                    
+                       <img src="{{event.photo.url}}" class="img-fluid">
+                    
+               
+               
+            </div>
+    </li>
+    {% endfor %}
+</ul>
